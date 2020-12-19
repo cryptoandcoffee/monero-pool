@@ -110,6 +110,16 @@ when to fetch a new block template to send to your miners. You're essentially
 giving your miners a head-start over miners in pools which use polling (which is
 what currently all the other pool implementations do).
 
+### Starting the pool and connecting to Monero
+
+Once you have built Monero from source and compiled monero-pool you can get up and running with these two commands.  Replace "your_wallet_name" with your wallet file name.
+
+```
+./monerod --block-notify '/usr/bin/pkill -USR1 monero-pool'
+./monero-wallet-rpc --disable-rpc-login --trusted-daemon --rpc-bind-port 18085 --wallet-file your_wallet_name --prompt-for-password
+./monero-pool
+```
+
 ### Interconnected pools
 
 In some situations it's desirable to run multiple pool instances that behave as
