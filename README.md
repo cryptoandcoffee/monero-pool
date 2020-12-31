@@ -1,3 +1,12 @@
+# High Level steps to run 
+
+1. Install Dependencies
+2. Build and Start Monero Wallet from source
+3. Build Pool 
+4. Start Monero RPC
+5. Start Pool
+
+
 # monero-pool
 
 A Monero mining pool server written in C.
