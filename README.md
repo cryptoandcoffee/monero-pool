@@ -36,13 +36,10 @@ document: [Stratum mode self-select](./sss.md).
 For testing, a reference mainnet pool can be found at
 [monerop.com](http://monerop.com).
 
-## Compiling from source
-
-### Dependencies
+### 1.  Clone and Compile Monero Source
 
 The build system requires the Monero source tree to be cloned and compiled.
-Follow the
-[instructions](https://github.com/monero-project/monero#compiling-monero-from-source)
+Follow the [instructions](https://github.com/monero-project/monero#compiling-monero-from-source)
 for compiling Monero, then export the following variable:
 
 ```bash
@@ -65,7 +62,7 @@ command:
 ```
 sudo apt-get install liblmdb-dev libevent-dev libjson-c-dev uuid-dev
 ```
-### Compile
+### 2. Compile monero-pool
 
 After installing all the dependencies as described above, to compile the pool as
 a release build, run:
