@@ -41,7 +41,7 @@ For testing, a reference mainnet pool can be found at
 git clone https://github.com/cryptoandcoffee/monero-pool
 cd monero-pool
 #Update .env with the version of Monero blockchain you want to build
-docker build -f Dockerfile-monero -t monero-blockchain
+docker build --build-arg VERSION=v0.17.1.9 -f Dockerfile-monero -t monero-blockchain
 docker build -f Dockerfile-pool -t monero-pool
 ./generate_wallet.sh
 #Answer the prompts to create the wallet for the pool
