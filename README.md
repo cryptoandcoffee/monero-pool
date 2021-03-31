@@ -46,7 +46,7 @@ Follow the
 for compiling Monero, then export the following variable:
 
 ```bash
-export MONERO_ROOT=/path/to/cloned/monero
+export MONERO_ROOT=$(pwd)
 ```
 
 Replacing the path appropriately.
