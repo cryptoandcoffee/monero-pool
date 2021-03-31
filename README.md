@@ -44,6 +44,7 @@ cd monero-pool
 docker build -f Dockerfile-monero -t monero-blockchain
 docker build -f Dockerfile-pool -t monero-pool
 ./generate_wallet.sh
+#Answer the prompts to create the wallet for the pool
 ./run.sh
 ```
 ### 1.  Clone and Compile Monero Source
