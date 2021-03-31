@@ -44,6 +44,7 @@ cd monero-pool
 docker build --build-arg VERSION=v0.17.1.9 -f Dockerfile-monero -t monero-blockchain
 docker build -f Dockerfile-pool -t monero-pool
 ./generate_wallet.sh
+./speedup_sync.sh
 #Answer the prompts to create the wallet for the pool
 ./run.sh
 ```
