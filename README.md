@@ -71,6 +71,7 @@ After installing all the dependencies as described above, to compile the pool as
 a release build, run:
 
 ```
+export MONERO_ROOT=$(pwd)
 make release
 ```
 
@@ -79,6 +80,7 @@ The application will be built in `build/release/`.
 Optionally you can compile a debug build by simply running:
 
 ```
+export MONERO_ROOT=$(pwd)
 make
 ```
 
