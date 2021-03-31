@@ -39,14 +39,6 @@ For testing, a reference mainnet pool can be found at
 ### 1.  Clone and Compile Monero Source
 
 The build system requires the Monero source tree to be cloned and compiled.
-Follow the [instructions](https://github.com/monero-project/monero#compiling-monero-from-source)
-for compiling Monero, then export the following variable:
-
-```bash
-export MONERO_ROOT=$(pwd)
-```
-
-Replacing the path appropriately.
 
 Beyond the Monero dependencies, the following extra libraries are also required
 to build the pool:
@@ -56,12 +48,17 @@ to build the pool:
 - json-c
 - uuid
 
-As an example, on Ubuntu, these dependencies can be installed with the following
-command:
+```bash
+apt install build-essential cmake pkg-config libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev libpgm-dev qttools5-dev-tools libhidapi-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler libudev-dev libboost-chrono-dev libboost-date-time-dev libboost-filesystem-dev libboost-locale-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev doxygen graphviz liblmdb-dev libevent-dev libjson-c-dev uuid-dev
+git clone --recursive https://github.com/monero-project/monero
+cd monero && git submodule init && git submodule update
+make release -j$(nproc)
+export MONERO_ROOT=$(pwd)
+```
 
-```
-sudo apt-get install liblmdb-dev libevent-dev libjson-c-dev uuid-dev
-```
+For other systems than Debian the [instructions](https://github.com/monero-project/monero#compiling-monero-from-source)
+for compiling Monero
+
 ### 2. Compile monero-pool
 
 After installing all the dependencies as described above, to compile the pool as
