@@ -54,19 +54,10 @@ git clone --recursive https://github.com/monero-project/monero
 cd monero && git submodule init && git submodule update
 make release -j$(nproc)
 export MONERO_ROOT=$(pwd)
-```
-
-For other systems than Debian the [instructions](https://github.com/monero-project/monero#compiling-monero-from-source)
-for compiling Monero
-
-### 2. Compile monero-pool
-
-After installing all the dependencies as described above, to compile the pool as
-a release build, run:
-
-```
-export MONERO_ROOT=$(pwd)
-make release
+cd ..
+git clone https://github.com/cryptoandcoffee/monero-pool monero-pool
+cd monero-pool
+make release -j$(nproc)
 ```
 
 The application will be built in `build/release/`.
@@ -79,6 +70,9 @@ make
 ```
 
 Debug builds are output in `build/debug/`.
+
+For other systems than Debian the [instructions](https://github.com/monero-project/monero#compiling-monero-from-source)
+for compiling Monero
 
 ## Configuration
 
