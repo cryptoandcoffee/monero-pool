@@ -36,6 +36,15 @@ document: [Stratum mode self-select](./sss.md).
 For testing, a reference mainnet pool can be found at
 [monerop.com](http://monerop.com).
 
+### Quickstart - with Docker!
+
+git clone https://github.com/cryptoandcoffee/monero-pool
+cd monero-pool
+docker build -f Dockerfile-monero -t monero-blockchain
+docker build -f Dockerfile-pool -t monero-pool
+./generate_wallet.sh
+./run.sh
+
 ### 1.  Clone and Compile Monero Source
 
 The build system requires the Monero source tree to be cloned and compiled.
